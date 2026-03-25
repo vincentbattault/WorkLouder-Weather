@@ -8,7 +8,7 @@ wlabel.set_style_text_font(wl.ui.FONT.SMALL, 0)
 wlabel.set_style_text_color(lv.color_hex(0xFFFFFF), 0)
 wlabel.set_width(170)
 wlabel.set_style_text_align(lv.TEXT_ALIGN.CENTER, 0)
-wlabel.set_pos(0, 52)
+wlabel.set_pos(0, 8)
 
 t = lv.label(lv_root)
 t.set_text("--")
