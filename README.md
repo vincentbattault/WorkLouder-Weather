@@ -1,31 +1,31 @@
 # Weeeather
 
-Widget meteo pour le **WorkLouder Nomad [E] v1** via le Custom Widget SDK.
+Weather widget for the **WorkLouder Nomad [E] v1** using the Custom Widget SDK.
 
-Affiche la temperature actuelle, min/max du jour, vent, humidite et conditions meteo avec un degradé de fond dynamique.
-<img width="1119" height="443" alt="Capture d’écran 2026-03-25 à 17 03 06" src="https://github.com/user-attachments/assets/f58b5778-0365-4d59-ad79-09107d2881d9" />
+Displays current temperature, daily min/max, wind, humidity and weather conditions with a dynamic background gradient.
 
+<img width="1119" height="443" alt="Screenshot" src="https://github.com/user-attachments/assets/f58b5778-0365-4d59-ad79-09107d2881d9" />
 
-## Fonctionnement
+## How it works
 
-- `app.py` — UI sur le device (MicroPython / LVGL, ecran 170x320)
-- `worker.py` — fetch meteo via [Open-Meteo](https://open-meteo.com/) + geolocalisation IP
+- `app.py` — Device-side UI (MicroPython / LVGL, 170x320 screen)
+- `worker.py` — Fetches weather data via [Open-Meteo](https://open-meteo.com/) + IP geolocation
 
-## Degradés
+## Gradients
 
-| Condition | Haut | Bas |
-|-----------|------|-----|
-| Clair | `#FFDD00` | `#FF5A00` |
-| Nuageux | `#011D39` | `#FFFFFF` |
-| Pluie | `#005199` | `#CDCDCD` |
-| Neige | `#6EBEFF` | `#FFFFFF` |
-| Orage | `#E570FF` | `#939EFF` |
+| Condition | Top | Bottom |
+|-----------|-----|--------|
+| Clear | `#FFDD00` | `#FF5A00` |
+| Cloudy | `#011D39` | `#FFFFFF` |
+| Rain | `#005199` | `#CDCDCD` |
+| Snow | `#6EBEFF` | `#FFFFFF` |
+| Thunderstorm | `#E570FF` | `#939EFF` |
 
-## Prerequis
+## Requirements
 
-- Firmware SDK (`v0.9.0-sdk.1`)
-- App Input SDK (`v0.15.0-sdk.1`)
+- SDK Firmware (`v0.9.0-sdk.1`)
+- Input SDK App (`v0.15.0-sdk.1`)
 
-## Licence
+## License
 
 [IDGAFPL](LICENSE)
