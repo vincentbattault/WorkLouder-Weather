@@ -1,6 +1,7 @@
 import wlsdk as wl
 import lvgl as lv
 import gc
+import math
 
 wlabel = lv.label(lv_root)
 wlabel.set_text("")
@@ -91,6 +92,10 @@ lv_root.set_style_bg_color(lv.color_hex(0xFF8C00), 0)
 lv_root.set_style_bg_grad_color(lv.color_hex(0xE65100), 0)
 lv_root.set_style_bg_grad_dir(lv.GRAD_DIR.VER, 0)
 lv_root.set_style_bg_opa(255, 0)
+
+def update():
+    opa = int(128 + 127 * math.sin(wl.time.get_elapsed() * 1.5))
+    dot.set_style_bg_opa(opa, 0)
 
 def start():
     wl.rpc.send_notify("weather.fetch", "")
